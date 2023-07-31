@@ -1,0 +1,4 @@
+<view class="video">
+    <video src="https://yunkongjian.si7.xin/files/170dae975981da6fbcde0a72c175a73d_37574364.mp4" class="item"></video>
+</view>
+<image src="/img/business/story.png" mode="widthFix" class="img"></image>

@@ -1,0 +1,48 @@
+<!--pages/order/order.wxml-->
+<view class="fatherBox">
+  <view class="Information">
+    <view style="position: relative; top: 10px;left: 30rpx;font-weight: 700;border-bottom: solid 1px rgb(231, 229, 229); width: 550rpx;">塔斯汀·中国汉堡(湖北科技学院店)</view>
+    <!-- <view style="position: relative; top: 10px;left: 30rpx;width: 600rpx;">联系电话：{{telphone}}</view> -->
+    <view class="pickUpNum">
+      <view style=" width: 70rpx; height: 200rpx; font-size: larger; font-weight: 500; color: white; text-align: center; line-height: 65rpx; background-color: rgb(253, 103, 2)">取餐号</view>
+      <view>
+        <view style="width: 500rpx; height: 100rpx;">
+          <text style="position: relative; left: 20rpx; top: 10rpx; font-weight: 600; font-size: 80rpx;">A66</text>
+        </view>
+        <view style="position: relative; left: 20rpx; top: 10rpx; width: 500rpx; height: 80rpx; color: grey; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+          备注：{{comment}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 订单信息 -->
+  <view class="orderInformation">
+    <scroll-view scroll-y="true" style="height: 300rpx;">
+      <!-- 遍历订单项 -->
+      <view class="orderRow" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" id="{{index}}">
+        <!-- 图片位置 -->
+        <view class="imagePostion">
+          <image src="{{item.image}}"></image>
+        </view>
+        <!-- 商品信息 -->
+        <view class="commodityInformation">
+          <text>{{item.name}}</text> <!-- 商品名 -->
+          <view class="commodityNum">x{{item.count}}</view> <!-- 商品数量 -->
+          <view class="position_price">￥{{item.price}}</view> <!-- 商品价格 -->
+        </view>
+      </view>
+    </scroll-view>
+    <view style="display: flex;">
+      <text style="line-height: 100rpx; position: relative; left: 50rpx; font-weight: 600;">总计:</text>
+      <view style="position: absolute; bottom: 30rpx; right: 50rpx; color: orange; font-weight: 600;">￥{{price}}</view>
+    </view>
+  </view>
+
+  <!-- 订单编号信息 -->
+  <view class="orderNum">
+    <view style="line-height: 70rpx;"><text space="emsp">订单信息: {{InforNum}}</text></view>
+    <view style="line-height: 70rpx;"><text space="emsp">订单号码: {{orderNum}}</text></view>
+    <view style="line-height: 70rpx;"><text space="emsp">订单时间: {{year}}-{{month+1}}-{{date}} {{hourOne}}:{{minOne}}:{{sec}}</text></view>
+  </view>
+</view>

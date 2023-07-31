@@ -1,0 +1,22 @@
+<!-- 商家评分区 -->
+<view class="box1">
+    <view class="point">{{totalvalue}}</view>
+    <view>
+        <text>商家评分</text>
+        <van-rate value="{{totalvalue}}" bind:change="onChange" readonly allow-half/>
+    </view>
+</view>
+<!-- 用户评价区 -->
+<view class="box2">
+    <view class="apr" wx:for="{{aprList}}" wx:key="id">
+        <view class="ifm">
+            <image class="headshot" src="{{item.headshot}}"></image>
+            <view>
+                <view class="name">{{item.username}}</view>
+                <view class="data">{{item.data}}</view>
+            </view>
+        </view>
+            <van-rate value="{{item.value}}" bind:change="onChange" readonly allow-half size="18" />
+        <view class="apr_item">{{item.apr}}</view>
+    </view>
+</view>

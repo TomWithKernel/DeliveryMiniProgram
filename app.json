@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/merchants/merchants",
+    "pages/account/account",
+    "pages/order/order",
+    "pages/allOrders/allOrders",
+    "pages/pickUpCode/pickUpCode",
+    "pages/myself/myself",
+    "pages/appraise/appraise",
+    "pages/business/business",
+    "pages/gift/gift",
+    "pages/balance/balance",
+    "pages/story/story"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFD919",
+    "navigationBarTitleText": "快乐外卖",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#efefef",
+    "onReachBottomDistance": 50
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2",
+  "tabBar": {
+    "selectedColor":"#000000", 
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "点餐",
+        "iconPath": "/img/tabBars/hamburger.png",
+        "selectedIconPath": "/img/tabBars/hamburger-active.png"
+      },
+      {
+        "pagePath": "pages/allOrders/allOrders",
+        "text": "订单",
+        "iconPath": "/img/tabBars/order.png",
+        "selectedIconPath": "/img/tabBars/order-active.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "/img/tabBars/myself.png",
+        "selectedIconPath": "/img/tabBars/myself-active.png"
+      }
+      
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+page {
+    background-color: #f5f5f5;
+}
+.bg {
+    position: fixed;
+    top: 430rpx;
+    width: 400rpx;
+    height: 400rpx;
+}
+.box {
+    height: 57rpx;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.option1 {
+    color: black;
+}
+.option2 {
+    color: black;
+}
+.option1.active {
+    color: #d42520;
+}
+.option2.active {
+    color: #d42520;
+}
+.buttom {
+    position: absolute;
+    top: 50rpx;
+    right: 550rpx;
+    width: 80rpx;
+    height: 7rpx;
+    border-radius: 5rpx;
+    background-color: #d42520;
+    /* transform过渡 */
+    transition: 0.2s;
+}
+.buttom.active {
+    transform: translate(370rpx,0rpx);
+}

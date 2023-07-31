@@ -1,0 +1,103 @@
+.fatherBox {
+  width: 100%;
+  height: 1110rpx;
+  background-color: #eee;
+}
+
+.Information {
+  width: 90vw;
+  height: 300rpx;
+  margin-bottom: 50rpx;
+  background-color: white;
+  position: relative;
+  top: 20rpx;
+  left: 40rpx;
+  border-radius: 20rpx;
+}
+
+.orderInformation {
+  width: 90vw;
+  height: 400rpx;
+  margin-bottom: 50rpx;
+  background-color: white;
+  position: relative;
+  top: 20rpx;
+  left: 40rpx;
+  border-radius: 20rpx;
+}
+
+
+/* 遍历订单项 */
+.orderRow {
+  position: relative;
+  top: 20rpx;
+  height: 120rpx;
+  display: flex;
+  /* background-color: pink; */
+}
+
+/* 订单图片 */
+.imagePostion image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  position: relative;
+  left: 10rpx;
+}
+
+/* 订单信息盒子 */
+.commodityInformation {
+  display: flex;
+}
+
+/* 商品信息 */
+.commodityInformation text {
+  width: 400rpx;
+  overflow: hidden;
+  /* 匀速溢出内容，隐藏 */
+  text-overflow: ellipsis;
+  /* 文字用省略号代替超出的部分 */
+  white-space: nowrap;
+  /* 强制不换行 */
+  position: relative;
+  left: 25rpx;
+  top: 10rpx;
+  font-size: medium;
+  font-weight: 500;
+}
+
+/* 商品数量 */
+.commodityNum {
+  position: absolute;
+  left: 150rpx;
+  bottom: 10rpx;
+  color: gray;
+}
+
+/* 商品价格 */
+.position_price {
+  position: absolute;
+  top: 10rpx;
+  right: 30rpx;
+}
+
+.orderNum {
+  width: 90vw;
+  height: 210rpx;
+  margin-bottom: 50rpx;
+  background-color: white;
+  position: relative;
+  top: 20rpx;
+  left: 40rpx;
+  border-radius: 20rpx;
+}
+
+.pickUpNum{
+  position: relative;
+  top: 35rpx;
+  left: 30rpx;
+  width: 600rpx;
+  height: 200rpx;
+  display: flex;
+  background-color: #ffd919;
+}

@@ -1,0 +1,217 @@
+swiper {
+  height: 250rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.header_father {
+  height: 180px;
+  background-color: #FFD919;
+}
+
+.header1 {
+  line-height: 55px;
+  float: left;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.header1_img {
+  position: relative;
+  right: 30px;
+  float: right;
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+}
+
+.switch_bar {
+  width: auto;
+  height: 63rpx;
+  background-color: white;
+  display: flex;
+}
+
+.switch_bar_button {
+  width: 33.3333%;
+  height: 60rpx;
+  background: white;
+  line-height: 60rpx;
+  text-align: center;
+  font-weight: 600;
+}
+
+.switch_bar_button.active {
+  background: red;
+}
+
+
+/* 订单选择框 父框box*/
+.box {
+  height: 1050rpx;
+  background-color: white;
+  overflow: scroll;
+  display: flex;
+}
+
+
+/* 3.左盒子*/
+/* 3.1. 左侧栏主盒子总体设置 */
+.box_left {
+  position: relative;
+  /* 使用绝对定位 */
+  top: 0px;
+  /* 距离上边距：0px */
+  left: 0px;
+  /* 距离左边距：0px */
+  width: 25%;
+  /* 每个item所占的宽度 */
+  height: 450px;
+  background: white;
+  /* 主盒子设置背景色为灰色 */
+  text-align: center;
+  /* 文字居中显示 */
+  overflow: scroll;
+}
+
+/* 3.2. 左侧栏的每个item */
+.box_left .box_left_items {
+  height: 40px;
+  /* 每个item高40px*/
+  padding: 6px 0;
+  /* 上内边距和下内边距是 6px[增加高度] 右内边距和左内边距是 0px*/
+  border-bottom: 1px solid #dedede;
+  /* 设置下边线 */
+  font-size: 14px;
+  /* 设置文字大小：14px */
+  line-height: 40px;
+  font-family: monospace;
+}
+
+/* 3.3. 左侧栏list的item被选中时*/
+.box_left .box_left_items.active {
+  background: white;
+  font-weight: 800;
+  font-family: monospace;
+  line-height: 40px;
+  border-left: 3px solid #FFD919;
+  /* 设置边框的宽度以及颜色 */
+}
+
+/* 4.右盒子 */
+/* 4.1. 右侧栏主盒子总体设置 */
+.box_right {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  width: 75%;
+  /* 右侧主盒子所占宽度 */
+  height: 450px;
+  /* 右侧主盒子所占高度 */
+  box-sizing: border-box;
+  /* 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制*/
+  background: white;
+  /* 右侧主盒子背景颜色 */
+  overflow: scroll;
+}
+
+/* 4.2. 右侧栏中的每个item */
+.box_right .box_right_items {
+  width: 100%;
+  /* 每个item设置宽度是33.33% */
+  height: 120px;
+  /* 每个item设置高度是120px */
+  background-color: white;
+  border-bottom: 0.5px solid gray;
+  display: flex;
+}
+
+/* 4.3. 右侧栏中的每个item的图样式设置 */
+.box_right .box_right_items image {
+  width: 240rpx;
+  /* 给图片设置宽度 */
+  height: 240rpx;
+  /* 给图片设置高度 */
+}
+
+.position_commodity{
+  /* 商品信息样式 */
+  position: absolute;
+  top: 0rpx;
+  left: 240rpx;
+}
+
+.box_right .box_right_items text {
+  /* 商品字样式 */
+  position: relative;
+  top: 10px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.position_price{
+  /* 商品价格样式 */
+  font-size: large;
+  font-weight: 700;
+  color: rgb(255, 62, 62);
+  position: absolute;
+  top: 185rpx;
+  left: 20rpx;
+}
+
+.position_commodity_button_subtract {
+  /* 商品   -   按钮 */
+  position: absolute;
+  top:  180rpx;
+  left: 150rpx;
+  background-color: #FFD919;
+}
+
+.commodity_number {
+  /* 商品数量显示 */
+  text-align: center;
+  position: absolute;
+  top:  180rpx;
+  left: 200rpx;
+  height: 25px;
+  width: 25px;
+}
+
+
+.position_commodity_button_addition {
+  position: absolute;
+  /* 商品   +   按钮 */
+  top:  180rpx;
+  left: 250rpx;
+  background-color: #FFD919;
+}
+
+
+.footer {
+  background-color: #FFD919;
+  width: 90%;
+  height: 70px;
+  position: absolute;
+  left: 20px;
+  bottom: 0px;
+  z-index: 2;
+  opacity: 0.7;
+  border-radius: 25px;
+  position: fixed;
+}
+
+.footer_son1 {
+  background-color: black;
+  position: relative;
+  top: 20px;
+  height: 50px;
+  border-radius: 15px;
+  opacity: 1;
+
+}
+
+
+

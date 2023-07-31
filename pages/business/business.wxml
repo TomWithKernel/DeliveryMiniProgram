@@ -1,0 +1,43 @@
+<view class="box1">
+    <!-- 地址 -->
+    <view class="address">
+        <image src="/img/business/address.png" class="icon"></image>
+        <text>{{address}}</text>
+        <image src="/img/business/phone.png" class="icon"
+        bindtap="phoneClick"  
+        style="width: 40rpx;height: 40rpx;margin-right: 5rpx;"></image>
+    </view>
+    <!-- 滚动图区 -->
+    <view class="story">
+    <!-- 横向滚动 -->
+        <scroll-view scroll-x class="scroll">
+            <view class="item"
+            wx:for="{{scrollList}}" 
+            wx:key="id">
+                <image src="{{item.img}}" mode="aspectFill" class="img" 
+                data-info="{{item.id}}"
+                bindtap="tapHandlar"></image>
+            </view>
+        </scroll-view>
+        <view class="text">
+            <text>环境图来源：大众点评-网友自发上传</text>
+        </view>
+    </view>
+</view>
+
+<view class="box2">
+    <view class="dtb">
+        <image src="/img/business/dtb.png" class="icon"></image> 
+        配送服务：<image src="/img/business/meituan.png" class="icon"></image> {{dtb}}
+    </view>
+    <view class="time">
+        <image src="/img/business/time.png" class="icon"></image> 配送时间：{{time}}
+    </view>
+</view>
+
+<view class="box3">
+    <view class="server">
+        <image src="/img/business/server.png" class="icon" style="width: 40rpx;height: 40rpx;"></image> 
+        商家服务：<image src="/img/business/get.png" class="icon"></image> {{server}}
+    </view>
+</view>

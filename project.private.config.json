@@ -1,0 +1,34 @@
+{
+  "projectname": "happytakeaway",
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "结算页面",
+          "pathName": "pages/account/account",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "订单页面",
+          "pathName": "pages/allOrders/allOrders",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "到店自取",
+          "pathName": "pages/pickUpCode/pickUpCode",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

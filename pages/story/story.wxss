@@ -1,0 +1,9 @@
+.img {
+    width: 100%;
+}
+.item {
+    position: absolute;
+    top: 475rpx;
+    left: 32rpx;
+    width: 92%;
+}

@@ -1,0 +1,111 @@
+/* 设置页面背景颜色 */
+page {
+    background: rgb(230, 230, 230);
+}
+/* 背景 */
+.background {
+    position: relative;
+}
+.beijing {
+    width: 100%;
+}
+/* 吉祥物 */
+.jxw {
+    position: absolute;
+    top: 400rpx;
+    right: 70rpx;
+    width: 160rpx;
+    height: 130rpx;
+}
+/* 菜单样式 */
+.one {
+    background-color: #fff;
+    margin: 20rpx;
+    border: 1rpx;
+    border-radius: 12rpx;
+}
+.one view {
+    height: 80rpx;
+    border-bottom: 1rpx solid rgb(230, 230, 230);
+    padding: 10rpx;
+}
+/* 菜单被点击时的效果 */
+.one .view-active {
+    background-color: rgb(250, 250, 250);
+}
+.one .img {
+    position: relative;
+    top: 20rpx;
+    left: 10rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.one text {
+    position: relative;
+    top: 13rpx;
+    left: 20rpx;
+}
+.one .arrow {
+    float: right;
+    position: relative;
+    top: 26rpx;
+    right: 40rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+/* 登录界面样式 */
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1000rpx;
+    background-color: #fff;
+    margin-top: 50rpx;
+    padding-top: 100rpx;
+    text-align: center;
+    color: orange;
+}
+/* 登录按钮样式 */
+.login button {
+    width: 50%;
+    margin: 50rpx auto;
+    color: #fff;
+    background-color: orange;
+}
+/* 点击按钮时颜色变化 */
+.login .button-hover {
+    color: #fff;
+    background-color: rgb(228, 148, 0);
+}
+.default {
+    border-bottom: 1rpx solid rgb(190, 190, 190);
+    padding: 20rpx;
+}
+.default image {
+    display: block;
+    margin: 0 auto 20rpx auto;
+    overflow: hidden;
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%
+}
+.login text {
+    font-size: large;
+    font-weight: 600;
+}
+/* 用户信息样式 */
+.userinfo {
+    display: flex;
+    align-items: center;
+    margin: 20rpx;
+    background-color: #fff;
+    border-radius: 12rpx;
+    font-size: large;
+}
+.userinfo-avatar {
+    overflow: hidden;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
