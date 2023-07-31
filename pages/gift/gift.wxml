@@ -1,7 +1,0 @@
-<!--pages/gift/gift.wxml-->
-<view class="box">
-    <view bindtap="tapHandlar1" class="option1 {{flag == 0 ? 'active' : ''}}">可使用（{{available}}）</view>
-    <view bindtap="tapHandlar2" class="option2 {{flag == 1 ? 'active' : ''}}">历史礼品卡（{{history}}）</view>
-    <view class="buttom {{flag == 1 ? 'active' : ''}}"></view>
-    <image src="../../img/gift/0.png" alt="" mode="widthFix" class="bg"/>
-</view>
