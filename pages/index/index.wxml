@@ -1,0 +1,92 @@
+<view class="header_father">
+  <view class="header_icon">
+    <view class="header1">
+      <text space="emsp"> 塔斯汀中国·汉堡（湖科店）</text>
+    </view>
+    <view class="header1_img1">
+      <image class="header1_img" src="/img/indexImg/index_icon1.png"></image>
+    </view>
+  </view>
+
+  <view>
+    <!-- 轮播图 -->
+    <swiper indicator-color="white" circular autoplay="true" interval="3000">
+      <swiper-item>
+        <image src="/img/foods/swiper1.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/img/foods/swiper2.png"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+</view>
+
+<view class="switch_bar">
+  <view class="switch_bar_button" style="border-top: 3px solid #FFD919;">点菜</view>
+  <view class="switch_bar_button" style="border-top: 3px solid white;" bindtap="gotoMessage">评价</view>
+  <view class="switch_bar_button" style="border-top: 3px solid white;" bindtap="gotoMerchants">商家</view>
+</view>
+
+
+<view class="box">
+  <!-- 左侧栏 -->
+  <view class='box_left'>
+    <view class="box_left_items {{menu == index ? 'active' : ''}}" wx:for="{{arrayList}}" wx:for-item="itemName" wx:key="id" bindtap="switchRightTab" data-id="{{index}}">
+      {{itemName}}
+    </view>
+  </view>
+
+  <!-- 右侧栏外盒子 -->
+  <scroll-view scroll-y="true" scroll-into-view="{{menuindex}}" class="box_right">
+    <!-- 右侧栏种每一个商品
+        list:商品列表
+        rightmenu:每一个商品
+        rightindex：商品序号
+     -->
+    <scroll-view class="box_right_items" wx:for="{{list}}" wx:for-item="rightmenu" wx:for-index="rightindex" id="a{{rightindex}}">
+      <!-- 商品内容 -->
+      <view>
+        <!-- 商品图片 -->
+        <view class="position_image">
+          <image src="{{rightmenu.image}}"></image>
+        </view>
+        <!-- 商品介绍 -->
+        <view class="position_commodity">
+          <text>{{rightmenu.name}}</text><!-- 商品名 -->
+          <view class="position_price">￥{{rightmenu.price}}</view><!-- 商品价格 -->
+          <button wx:if="{{rightmenu.count>0}}" class="position_commodity_button_subtract" style="width:50rpx;height: 50rpx;padding:0; border-radius: 50rpx;" bindtap="commodity_subtract" data-info="{{rightmenu}}" data-index="{{rightindex}}">-</button><!-- 减号按钮 -->
+          <view wx:if="{{rightmenu.count>0}}" class="commodity_number">{{rightmenu.count}}</view><!-- 商品数量 -->
+          <button class="position_commodity_button_addition" style="width:50rpx;height:50rpx;padding:0; border-radius: 50rpx" bindtap="commodity_addition" data-info="{{rightmenu}}" data-index="{{rightindex}}">+</button><!-- 加号按钮 -->
+        </view>
+      </view>
+    </scroll-view>
+
+
+  </scroll-view>
+</view>
+
+<view class="footer">
+  <view class="footer_son1">
+    <image wx:if="{{number==0}}" style="width: 30px; height: 30px; position: relative; left: 25px;top: 8px;" src="/img/order/noOrder.png"></image>
+    <image wx:if="{{number>0}}" style="width: 30px; height: 30px; position: relative; left: 25px;top: 8px;" src="/img/order/isOrder.png"></image>
+    <text style="color: white; line-height: 50px;position: relative; left:20px;" space="emsp"> 总价：￥{{totalPrice}}</text>
+    <button wx:if="{{number!=0}}" style="position: absolute; width: 88px; height: 40px; top: 5px; left: 240px; background-color: #FFD919; border-radius: 15px; line-height: 25px; font-size: large;" wx:if="{{number!=0}}" bindtap="gotoAccount">结算</button>
+  </view>
+</view>
+
+<!-- 弹窗功能 -->
+<view class="IsView" wx:if="{{0}}">
+  <view class="alertShade" style="position: absolute; top: 0rpx; left: 0rpx; background-color: rgba(0, 0, 0, 0.5); width: 100%; height: 1500rpx;  opacity: 0.5;"></view>
+  <view class="alertBox" style="width: 600rpx; height: 300rpx; background-color: white; position: absolute;top: 400rpx; left: 80rpx; border-radius: 50rpx;">
+    <view class="reminder" style="width: 600rpx; height: 100rpx; line-height: 100rpx;  text-align: center;">
+      <text style="font-weight: 700; font-size: large;" space="emsp">提 示</text>
+      <view>
+        <text style="color: gray;" space="emsp">请勾选你想要购买的商品</text>
+      </view>
+    </view>
+    <view class="selectBox" style="position:absolute; bottom:0rpx">
+      <button style="padding: 0rpx; width: 600rpx; height: 80rpx; border-radius:  0 0 50rpx 50rpx; text-align: center; line-height: 80rpx; border-top: solid 1px rgb(240, 238, 238);background-color: white;" bindtap="check">确定</button>
+    </view>
+  </view>
+</view>

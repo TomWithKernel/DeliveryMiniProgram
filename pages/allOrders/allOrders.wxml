@@ -1,0 +1,26 @@
+<scroll-view scroll-y="ture" class="fatherBox">
+  <!-- 父元素 -->
+  <!-- 历史订单项 -->
+  <view class="orderHistory" wx:for="{{allOrder}}" wx:for-item="item" wx:for-index="index" id="{{index}}">
+    <view class="companyName">塔斯汀·中国汉堡(湖北科技学院店)</view>
+    <view class="orderInfo">
+      <image src="{{item.orderList[0].image}}"></image>
+      <text style="position: relative; left: 20rpx; line-height: 100rpx;">{{item.orderList[0].name}}</text>
+      <view style="position: relative; top: 30rpx; color: rgb(92, 91, 91);">共{{item.orderList.length}}件</view>
+    </view>
+    <view class="orderTime">
+      <text style="font-size: small; color: rgb(92, 91, 91); position: relative; top: 15rpx;">下点时间：{{item.orderTime[0]}}-{{item.orderTime[1]+1}}-{{item.orderTime[2]}}  {{item.orderTime[3]}}:{{item.orderTime[4]}}</text>
+      <view class="price">
+        <text style="font-size: small; color: rgb(92, 91, 91);" >合计 </text>
+        <text style="font-size: small;">￥</text>
+        <text style="font-size: larger;">{{item.orderPrice}}</text>
+      </view>
+      
+    </view>
+    <view class="btn">
+      <button style="position: absolute; bottom: 15rpx; right: 15rpx; padding: 0rpx;width: 170rpx;height:50rpx;border-radius: 15rpx; line-height: 50rpx; font-size: small;background-color: #FFD919;" bindtap="nextOrder">再来一单</button>
+    </view>
+  </view>
+
+
+</scroll-view>
